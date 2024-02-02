@@ -1,22 +1,12 @@
 ## CSC435 Programming Assignment 1 (Winter 2024)
 **Jarvis College of Computing and Digital Media - DePaul University**
 
-**Student**: TO-DO write-student-name (TO-DO write-email-address)
+**Student**: Mohammed Suhaib Shaik (mshaik3@depaul.edu)
 
-**Solution programming language**: TO-DO write-solution-programming-language (C++ or Java)
+**Solution programming language**: Java
 
 ### Requirements
 
-If you are implementing your solution in C++ you will need to have GCC 12.x and CMake 3.22.x installed on your system. On Ubuntu 22.04 you can install GCC and set it as default compiler using the following commands:
-
-```
-sudo apt install g++-12 gcc-12 cmake
-sudo update-alternatives --remove-all gcc
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 120
-sudo update-alternatives --remove-all g++
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 110
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 120
 ```
 
 If you are implementing your solution in Java you will need to have Java 1.7.x and Maven 3.6.x installed on your systems. On Ubuntu 22.04 you can install Java and Maven using the following commands:
@@ -55,21 +45,6 @@ cmake --build build
 
 #### How to run application
 
-To run the C++ clean dataset program (after you build the project) use the following command:
-```
-./build/clean_dataset <input directory> <output directory>
-```
-
-To run the C++ word count program (after you build the project) use the following command:
-```
-./build/count_words <input directory> <output directory>
-```
-
-To run the C++ sort words program (after you build the project) use the following command:
-```
-./build/sort_words <input directory> <output directory>
-```
-
 ### Java solution
 #### How to build/compile
 
@@ -89,10 +64,11 @@ java -cp target/app-java-1.0-SNAPSHOT.jar csc435.app.CleanDataset <input directo
 
 To run the Java word count program (after you build the project) use the following command:
 ```
-java -cp target/app-java-1.0-SNAPSHOT.jar csc435.app.CountWords <input directory> <output directory>
+java -Xmx1g -cp target/app-java-1.0-SNAPSHOT.jar csc435.app.WordCount  <input directory> <output directory>
 ```
 
 To run the Java sort_words program (after you build the project) use the following command:
 ```
-java -cp target/app-java-1.0-SNAPSHOT.jar csc435.app.SortWords <input directory> <output directory>
+java -Xmx4g -cp target/app-java-1.0-SNAPSHOT.jar csc435.app.SortWordCount <input directory> <output directory>
+
 ```
